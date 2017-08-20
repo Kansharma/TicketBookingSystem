@@ -15,7 +15,7 @@ namespace Apttus.Assignment.DataAccessLayerr
         public Dictionary<string,IPerson> GetDetails()
         {
 			Dictionary<string, IPerson> persons = new Dictionary<string, IPerson>();
-			string conn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kansharma\source\repos\PersonProject\DataAccessLayerr\DatabasePerson.mdf;Integrated Security=True";
+			string conn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DatabasePerson.mdf;Integrated Security=True";
 			SqlConnection connection = new SqlConnection(conn);
 			connection.Open();
 			string query = "select * from Person";
